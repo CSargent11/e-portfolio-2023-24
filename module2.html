@@ -4,17 +4,72 @@
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 -->
-
 <html>
 	<head>
+		<div li><a href="index.html">Object-orientated planning</a></li>
 		<title>Module2</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 		<link rel="stylesheet" href="assets/css/main.css" />
 	</head>
 	<body class="is-preload">
+		</div>
+<html>
 
 <!-- Main -->
 
-<div li><a href="prologue.html">Module 2 Object-orientated planning</a></li>
-<h2>Module 2</h2>
+<div>
+Unit 1:
+Review codio module classes and objects – As python is an object-oriented programming language, almost everything in Python is an object, with its properties and methods. A Class is like an object constructor, or a "blueprint" for creating objects. Within these there are different functions to help the programme run smoothly.
+A class describes the contents of the objects that belong to it: it describes an aggregate of data fields called instance variables, and defines the operations called methods. An object is an element or instance of a class; objects have the behaviours of their class. The object is the actual component of programs, while the class specifies how instances are created and how they behave.
+<br>
+Article review/discussion – One aspect that is unexpected…
+That there are not more studies, published research relating to E-portfolios. The article stated that the researchers found zero published studies.
+How can we utilise E-portfolios to support and foster learning.
+E-portfolios can foster learning and show a deeper understanding/learning. It is a continuous reflection of their learning. John Dewey, 1933 said reflection is critical in developing knowledge and people learn best from reflection of their own experiences.
+Reflective learning paired with transformative learning helps students better understand the topic they are studying more in depth. The Hewett foundation, 2013 stated deeper learning to have 6 levels; master core academic content, think critically, solve complex problems, communicate effectively, work collaboratively, and learn how to learn and develop academic mindsets.
+In conclusion E-Portfolios can help students find greater meaning in their education and develop a better understanding of their learning process which in turn promotes confidence in their abilities within the subject they are studying.
+<br>
+Python programme –
+	<br>
+class Surfboard:
+    def __init__(self, brand, length, width):
+        self.brand = brand  # Unprotected variable
+        self._length = length  # Protected variable
+        self._width = width  # Protected variable
+
+    def get_length(self):
+        return self._length
+
+    def set_length(self, length):
+        self._length = length
+
+    def get_width(self):
+        return self._width
+
+    def set_width(self, width):
+        self._width = width
+
+
+my_surfboard = Surfboard("ABC Surf Co.", 6.2, 22.5)
+
+print("Brand:", my_surfboard.brand)  # Accessing unprotected variable
+print("Length:", my_surfboard.get_length())  # Accessing protected variable using a getter method
+print("Width:", my_surfboard.get_width())  # Accessing protected variable using a getter method
+
+my_surfboard.brand = "XYZ Surfboards"  # Modifying unprotected variable
+my_surfboard.set_length(6.4)  # Modifying protected variable using a setter method
+my_surfboard.set_width(23.0)  # Modifying protected variable using a setter method
+
+print("Updated Brand:", my_surfboard.brand)
+print("Updated Length:", my_surfboard.get_length())
+print("Updated Width:", my_surfboard.get_width())
+<br>
+
+Unit 2:
+
+Review codio modules class function and class methods – 
+In this lab I learnt a function is a block of code which only runs when it is called. You can pass data, known as parameters, into a function and the function will return data as a result. However, class methods are defined inside a class and are similar to defining a regular function. Comparable to inside an instance method, we use the self keyword to access or modify the instance variables. Same inside the class method, we use the cls keyword as a first parameter to access class variables. Therefore, the class method gives us control of changing the class state.
+
+	
+</div>

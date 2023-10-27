@@ -87,7 +87,6 @@ class Surfboard:
 		
 my_surfboard = Surfboard("ABC Surf Co.", 6.2, 22.5)
 	<br/>
-
 print("Brand:", my_surfboard.brand)  # Accessing unprotected variable
 	<br/>
 print("Length:", my_surfboard.get_length())  # Accessing protected variable using a getter method
@@ -113,7 +112,12 @@ print("Updated Width:", my_surfboard.get_width())
 Unit 2:
 </br>
 Review codio modules class function and class methods – 
-In this lab I learnt a function is a block of code which only runs when it is called. You can pass data, known as parameters, into a function and the function will return data as a result. However, class methods are defined inside a class and are similar to defining a regular function. Comparable to inside an instance method, we use the self keyword to access or modify the instance variables. Same inside the class method, we use the cls keyword as a first parameter to access class variables. Therefore, the class method gives us control of changing the class state.
+In this lab I learnt a function is a block of code which only runs when it is called.
+You can pass data, known as parameters, into a function and the function will return data as a result.</br>
+However, class methods are defined inside a class and are similar to defining a regular function.
+Comparable to inside an instance method, we use the self keyword to access or modify the instance variables.</br>
+Same inside the class method, we use the cls keyword as a first parameter to access class variables.
+Therefore, the class method gives us control of changing the class state.
 <br/>
 </br>
 Unit 3:
@@ -123,7 +127,7 @@ Unit 4:
 </br>
 Tasks continued…
 </br>
-	</br>
+</br>
 Unit 5:
 </br>
 Review codio module inheritance – </br>
@@ -137,19 +141,15 @@ Child class is the class that inherits from another class, also called derived c
 </br>
 	</br>
 	<style>
-    pre {
-        text-align: left;
-    }
+    pre {text-align: left;}
 </style>
 	<pre>
 Activity – class Vehicle:</br>
     def __init__(self, brand):
         self.brand = brand
 	</br>
-	</br>
 	def drive(self):
         raise NotImplementedError("Subclass must implement the drive() method")
-	</br>
 	</br>
 class Car(Vehicle):
 	</br>
@@ -157,21 +157,21 @@ class Car(Vehicle):
 	</br>
         print("Car is being driven autonomously.")
 	</br>
-	</br>
+
 class Truck(Vehicle):
 	</br>
     def drive(self):
 	</br>
         print("Truck is being driven autonomously.")
 	</br>
-	</br>
+
 class Motorcycle(Vehicle):
 </br>
     def drive(self):
 	</br>
         print("Motorcycle is being driven autonomously.")
 	</br>
-	</br>
+
 # Create instances of different vehicles
 	</br>
 car = Car("Tesla")
@@ -179,7 +179,6 @@ car = Car("Tesla")
 truck = Truck("Volvo")
 	</br>
 motorcycle = Motorcycle("Harley-Davidson")
-	</br>
 	</br>
 # Drive the vehicles using polymorphism
 	</br>

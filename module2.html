@@ -48,66 +48,12 @@ Reflective learning paired with transformative learning helps students better un
 The Hewett foundation, 2013 stated deeper learning to have 6 levels; master core academic content, think critically, solve complex problems, communicate effectively, work collaboratively, and learn how to learn and develop academic mindsets.<br/>
 In conclusion E-Portfolios can help students find greater meaning in their education and develop a better understanding of their learning process which in turn promotes confidence in their abilities within the subject they are studying.
 <br/>
-	<style>
-    pre {
-        text-align: left;
-    }
-</style>
-	<pre>
-Python programme –
-	<br/>
-class Surfboard:
-	<br/>
-    def __init__(self, brand, length, width):
-	<br/>
-        self.brand = brand  # Unprotected variable
-	<br/>
-        self._length = length  # Protected variable
-	<br/>
-        self._width = width  # Protected variable
-	<br/>
-    def get_length(self):
-	<br/>
-        return self._length
-	<br/>
-    def set_length(self, length):
-	<br/>
-        self._length = length
-	<br/>
-
-    def get_width(self):
-	<br/>
-        return self._width
-	<br/>
-
-    def set_width(self, width):
-	<br/>
-        self._width = width
-	<br/>
-		
-my_surfboard = Surfboard("ABC Surf Co.", 6.2, 22.5)
-	<br/>
-print("Brand:", my_surfboard.brand)  # Accessing unprotected variable
-	<br/>
-print("Length:", my_surfboard.get_length())  # Accessing protected variable using a getter method
-	<br/>
-print("Width:", my_surfboard.get_width())  # Accessing protected variable using a getter method
-	<br/>
-
-my_surfboard.brand = "XYZ Surfboards"  # Modifying unprotected variable
-	<br/>
-my_surfboard.set_length(6.4)  # Modifying protected variable using a setter method
-	<br/>
-my_surfboard.set_width(23.0)  # Modifying protected variable using a setter method
-	<br/>
-
-print("Updated Brand:", my_surfboard.brand)
-	<br/>
-print("Updated Length:", my_surfboard.get_length())
-	<br/>
-print("Updated Width:", my_surfboard.get_width())
-<br/>
-</pre>
+	<head>
+    <p>Python Programme:</p>
+</head>
+<body>
+    <img src="images/unit1.png" alt="Surfboard class">
+</body>
 <br/>
 Unit 2:
 </br>
@@ -148,55 +94,14 @@ Child class is the class that inherits from another class, also called derived c
 	to set the parent class as a parameter when creating the child class.
 </br>
 	</br>
-	<style>
-    pre {text-align: left;}
-</style>
-	<pre>
-Activity – class Vehicle:</br>
-    def __init__(self, brand):
-        self.brand = brand
-	</br>
-	def drive(self):
-        raise NotImplementedError("Subclass must implement the drive() method")
-	</br>
-class Car(Vehicle):
-	</br>
-    def drive(self):
-	</br>
-        print("Car is being driven autonomously.")
-	</br>
+		<head>
+    <p>Polymorphism:</p>
+</head>
+<body>
+    <img src="images/unit5.png" alt="Vehicle class">
+</body>
+<br/>
 
-class Truck(Vehicle):
-	</br>
-    def drive(self):
-	</br>
-        print("Truck is being driven autonomously.")
-	</br>
-
-class Motorcycle(Vehicle):
-</br>
-    def drive(self):
-	</br>
-        print("Motorcycle is being driven autonomously.")
-	</br>
-
-# Create instances of different vehicles
-	</br>
-car = Car("Tesla")
-	</br>
-truck = Truck("Volvo")
-	</br>
-motorcycle = Motorcycle("Harley-Davidson")
-	</br>
-# Drive the vehicles using polymorphism
-	</br>
-vehicles = [car, truck, motorcycle]
-	</br>
-for vehicle in vehicles:
-	</br>
-    vehicle.drive()
-</br>
-	</pre>
 </br>
 Unit 10:</br>
 Tasks continued…and final reflection.

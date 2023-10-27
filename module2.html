@@ -48,6 +48,11 @@ Reflective learning paired with transformative learning helps students better un
 The Hewett foundation, 2013 stated deeper learning to have 6 levels; master core academic content, think critically, solve complex problems, communicate effectively, work collaboratively, and learn how to learn and develop academic mindsets.<br/>
 In conclusion E-Portfolios can help students find greater meaning in their education and develop a better understanding of their learning process which in turn promotes confidence in their abilities within the subject they are studying.
 <br/>
+	<style>
+    pre {
+        text-align: left;
+    }
+</style>
 Python programme –
 	<br/>
 class Surfboard:
@@ -60,28 +65,34 @@ class Surfboard:
 	<br/>
         self._width = width  # Protected variable
 	<br/>
+	<br/>
     def get_length(self):
 	<br/>
         return self._length
+	<br/>
 	<br/>
 
     def set_length(self, length):
 	<br/>
         self._length = length
 	<br/>
+	<br/>
 
     def get_width(self):
 	<br/>
         return self._width
+	<br/>
 	<br/>
 
     def set_width(self, width):
 	<br/>
         self._width = width
 	<br/>
+	<br/>
 
 
 my_surfboard = Surfboard("ABC Surf Co.", 6.2, 22.5)
+	<br/>
 	<br/>
 
 print("Brand:", my_surfboard.brand)  # Accessing unprotected variable
@@ -90,12 +101,14 @@ print("Length:", my_surfboard.get_length())  # Accessing protected variable usin
 	<br/>
 print("Width:", my_surfboard.get_width())  # Accessing protected variable using a getter method
 	<br/>
+	<br/>
 
 my_surfboard.brand = "XYZ Surfboards"  # Modifying unprotected variable
 	<br/>
 my_surfboard.set_length(6.4)  # Modifying protected variable using a setter method
 	<br/>
 my_surfboard.set_width(23.0)  # Modifying protected variable using a setter method
+	<br/>
 	<br/>
 
 print("Updated Brand:", my_surfboard.brand)

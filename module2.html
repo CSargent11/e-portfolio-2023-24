@@ -146,6 +146,16 @@ Child class is the class that inherits from another class, also called derived c
 <strong>Unit 6: Abstract Methods and Interfaces</strong>
 	<br/>
 	<br/>
+Abstract methods and interfaces are fundamental concepts in object-oriented programming (OOP) that help define contracts and enforce behaviour in classes.
+Abstract methods are method declarations in a class that do not provide an implementation. They serve as placeholders and define a contract for derived classes to implement.
+They are declared using the `abstract` keyword and are meant to be overridden by derived classes.<br/>
+They enforce consistent behaviour across different classes and are typically found in abstract classes, which cannot be instantiated (Gamma et al., 2003).
+Whereas interfaces, define contracts for a group of related classes to follow. They contain method declarations without implementations and are declared using the `interface` keyword.
+Classes implement interfaces by providing implementations for all the methods defined in the interface. A class can implement multiple interfaces, allowing it to define behaviour from multiple sources.<br/>
+Interfaces provide complete abstraction of behaviour and enable polymorphism, where objects of different classes that implement the same interface can be treated uniformly (Phillips, 2018).
+Both abstract methods and interfaces promote code reusability, separation of concerns, and the ability to work with various implementations of a contract.
+They help in designing flexible and modular code in OOP systems by defining clear contracts and enforcing behaviour across different classes.
+<br/>
 	Review codio encapsulation –
 	<br/>
 This week in codio I learnt the term encapsulation and how to use it while programming.
@@ -155,6 +165,7 @@ This week in codio I learnt the term encapsulation and how to use it while progr
 A class is an example of encapsulation as it encapsulates all the data that is member functions, variables, etc.
 	The goal of information hiding is to ensure that an object’s state is always valid by controlling access to attributes that are hidden from the outside world.
 <br/>
+</br>
 <strong>Unit 7: Debugging / Error Handling, Data Structures and Data Search</strong></br>
 	<br/>
 	Discussion:

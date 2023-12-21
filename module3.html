@@ -134,7 +134,71 @@ We had to read chapters 2,6,7,8 of the course text (Pillai, 2017) and Cifuentes 
 
 	Codio labs:
 	</br>
-	Unit 4:
+	Unit 4: Exploring Programming Language Concepts
+</br>
+</br>
+What is ReDOS and what part do ‘Evil Regex’ play?
+</br>
+ReDOS (Regular Expression Denial of Service) is a vulnerability that occurs when a particular regular expression pattern is susceptible to exponential backtracking.
+	It can lead to significant performance degradation or even denial of service due to the excessive amount of time and resources consumed by the regex engine to process certain inputs.
+	ReDOS vulnerabilities can be exploited by crafting input strings that trigger the worst-case scenario for the regex pattern,
+	causing the regex engine to spend an excessive amount of time evaluating the input (Larson & Kirk, 2016).
+</br>
+What are the common problems associated with the use of regex? How can these be mitigated?
+</br>
+"Evil Regex" refers to regular expressions that are intentionally crafted to exploit ReDOS vulnerabilities.
+	These malicious regex patterns are designed to cause excessive backtracking, leading to denial of service or severe performance degradation when processing specific inputs (Larson & Kirk, 2016).
+</br>
+</br>
+How and why could regex be used as part of a security solution?
+	</br>
+Common problems associated with the use of regex include:
+</br>
+   a. Exponential Backtracking: Certain regex patterns can exhibit exponential backtracking, causing the regex engine to spend an inordinate amount of time processing input strings.
+</br>
+   b. Catastrophic Backtracking: This occurs when a regex pattern has multiple valid interpretations for a given input, leading to inefficient matching and performance issues.
+</br>
+   c. Inadequate Input Validation: Improper use of regex can lead to insufficient input validation, allowing potentially malicious input to bypass security checks.
+</br>
+   d. Complexity and Maintainability: Complex regex patterns can be challenging to understand, debug, and maintain over time, leading to code readability issues and potential bugs.
+</br>
+	</br>
+To mitigate these problems, the following steps can be taken:
+</br>
+   a. Optimize Regex Patterns: Analyse and optimise regex patterns to avoid excessive backtracking and catastrophic backtracking.
+	This involves structuring patterns to minimise ambiguity and unnecessary complexity.
+</br>
+   b. Input Length Limitations: Enforce input length limitations and implement proper input validation to prevent long inputs from triggering excessive backtracking.
+</br>
+   c. Use Regex Engines with Backtracking Limits: Employ regex engines or libraries that provide backtracking
+	limits or timeouts to prevent regex evaluation from consuming excessive resources.
+</br>
+   d. Thorough Testing: Perform comprehensive testing of regex patterns with various input scenarios, including edge cases and long inputs,
+	to identify and address potential performance issues.
+</br>
+	</br>
+4. Regex can be used as part of a security solution for various purposes:
+</br>
+   a. Input Validation and Filtering: Regex can be employed to validate and filter user inputs,
+	protecting against common security vulnerabilities such as injection attacks (e.g., SQL injection, cross-site scripting) by ensuring that inputs meet expected patterns.
+</br>
+   b. Log Analysis and Intrusion Detection: Regex can be used to analyse logs and detect patterns indicative of security breaches or intrusion attempts.
+	This can aid in identifying and responding to potential security incidents.
+</br>
+   c. Data Sanitisation: Regex can help sanitize and scrub sensitive information, such as personally identifiable information (PII) or credit card numbers,
+	from data sets to protect privacy and comply with data protection regulations.
+</br>
+   d. Web Application Firewall (WAF) Rules: Regex patterns can be used in web application firewalls to create rules for
+	blocking or allowing specific types of requests based on predefined patterns, helping to protect against common web application attacks.
+</br>
+However, it's important to note that regex should be used judiciously and with caution. Proper validation,
+	testing, and understanding of regex patterns are essential to avoid introducing vulnerabilities or performance issues.
+</br>
+References:
+</br>
+Larson, E. and Kirk, A. (2016) ‘Generating evil test strings for regular expressions’,
+	2016 IEEE International Conference on Software Testing, Verification and Validation (ICST) [Preprint]. doi:10.1109/icst.2016.29.
+</br>
 	</br>
 	Unit 5:
 	</br>

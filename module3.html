@@ -134,6 +134,45 @@ We had to read chapters 2,6,7,8 of the course text (Pillai, 2017) and Cifuentes 
 
 	<b>Codio labs:</b>
 	</br>
+	Buffer overflow in C:
+	</br>
+The error message "*** stack smashing detected ***: \<unknown> terminated" indicates that the program has encountered a stack-based buffer overflow,
+	which occurs when more data is written into a buffer than it can hold. This causes the excess data to overwrite adjacent memory locations on the stack,
+	potentially leading to program termination or security vulnerabilities. The "Aborted (core dumped)" part of the message indicates that the program was
+	forcibly terminated by the operating system, and a core dump file was created for debugging purposes. To fix this issue, the program's code needs to be carefully
+	reviewed to identify and address the buffer overflow, ensuring proper handling of buffer sizes and bounds checking to prevent writing beyond allocated memory.
+	This will improve the program's stability and security.
+	</br>
+	</br>
+Buffer overflow in Python:
+</br>
+The error message "Traceback (most recent call last): File 'Overflow.py', line 3, in <module> buffer[i]=7 IndexError: list assignment index out of range"
+	indicates that an IndexError occurred in the Python program "Overflow.py".
+</br>
+The error has occurred on line 3 of the program. The programme is trying to assign a value (7) to an index (i) in a list (buffer) that is out of range.
+	The index value provided is greater than or equal to the length of the list.
+</br>
+To fix the issue, the index that is being uses to access the list falls within its valid range. The index value needs to be less than the length of the list (taking into account zero-based indexing).
+</br>
+Once pip has been installed here is what happens.
+</br>
+1. "Building wheels for collected packages: typed-ast": The installation process is building "wheels" (a binary distribution format in Python) for the package named "typed-ast".
+	This step is necessary to compile the package for the specific platform.
+</br>
+2. "Running setup.py bdist_wheel for typed-ast ...done": The setup.py script for the "typed-ast" package is being executed to create the wheel distribution,
+	and it was completed successfully.
+</br>
+3. "Stored in directory: /home/codio/.cache/pip/wheels/a0/57/54/6c037af50d26591734cd3024784a7caab619474ea4a7c22ab4": The resulting wheel file for the "typed-ast"
+	package was stored in the specified directory.
+</br>
+4. "Successfully built typed-ast": The "typed-ast" package was built successfully.
+</br>
+5. "Installing collected packages": The installation process is now proceeding to install the packages listed after this line.
+</br>
+6. The subsequent lines list the packages that are being installed. Each line shows the name of the package followed by its version number.
+</br>
+Based on the provided output, the installation process was successful, and the listed packages have been installed with their respective versions.
+</br>
 </br>
 	<strong>Unit 4: Exploring Programming Language Concepts</strong>
 </br>

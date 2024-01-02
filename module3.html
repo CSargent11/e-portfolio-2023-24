@@ -238,12 +238,43 @@ However, it's important to note that regex should be used judiciously and with c
 </br>
 References:
 </br>
-Larson, E. and Kirk, A. (2016) ‘Generating evil test strings for regular expressions’,
-	2016 IEEE International Conference on Software Testing, Verification and Validation (ICST) [Preprint]. doi:10.1109/icst.2016.29.
+<i>Larson, E. and Kirk, A. (2016) ‘Generating evil test strings for regular expressions’,
+	2016 IEEE International Conference on Software Testing, Verification and Validation (ICST) [Preprint]. doi:10.1109/icst.2016.29.</i>
 </br>
 	</br>
-	<strong>Unit 5: An Introduction to Testing</strong>
+	<strong>Unit 5: An Introduction to Testing</strong></br>
 	</br>
+	<b>Exploring the Cyclomatic Complexity’s Relevance Today</b></br>
+	</br>
+	<i>The Cyclomatic Complexity is commonly considered in modules on testing the validity of code design today.
+	However, in your opinion, should it be? Does it remain relevant today? Specific to the focus of this module, is it relevant in our quest to develop secure software?</i>
+	</br>
+	</br>
+	Cyclomatic Complexity is a metric used to measure code complexity, it is relevant in code design for maintainability and testability purposes.
+	High complexity can make code harder to understand, maintain, and test thoroughly. Considering Cyclomatic Complexity helps identify areas that may benefit from refactoring or improved design.
+	</br>
+	However, Cyclomatic Complexity has limitations. It focuses solely on structural complexity and doesn't capture other dimensions of complexity.
+	Additionally, the appropriate complexity threshold varies depending on the context, making it a context-dependent metric.
+	The advised number of levels is less than ten and over ten it is encouraged to refracture the code.
+	</br>
+	Regarding security, while reducing complexity can contribute to improved security by enhancing code manageability and analysis,
+	Cyclomatic Complexity alone does not directly address security concerns. Developing secure software requires a holistic approach that considers factors such as input validation,
+	authentication, secure communication, and adherence to secure coding practices.
+	</br>
+	In conclusion, Cyclomatic Complexity remains relevant as a code quality metric, aiding maintainability and testability.
+	However, it should not be the sole determinant of code design decisions. Developing secure software necessitates considering a wider range of
+	security-specific factors alongside Cyclomatic Complexity analysis.
+	</br>
+	</br>
+References:
+</br>
+<i>Antinyan, V. et al. (2017) Evaluating code complexity triggers, use of complexity measures and the influence of code complexity on maintenance time.
+	Empirical software engineering : an international journal. [Online] 22 (6), 3057–3087.</i>
+</br>
+<i>Shepperd, M. (1988) A Critique of Cyclomatic Complexity as a Software Metric, Software Engineering Journal.</i>
+</br>
+</br>
+
 	<strong>Unit 6: Using Linters to Support Python Testing</strong>
 	</br>
 	<strong>Unit 7: Introduction to Operating Systems</strong>

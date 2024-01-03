@@ -277,7 +277,239 @@ References:
 
 	<strong>Unit 6: Using Linters to Support Python Testing</strong>
 	</br>
-	<strong>Unit 7: Introduction to Operating Systems</strong>
+	</br>
+	<b>Exploring Linters to Support Testing in Python: Question 1</b>
+	</br>
+	When running the equivalence.py the message in the terminal is -   File "equivalence.py", line 14
+	</br>
+	"""</br>
+	^</br>
+	IndentationError: expected an indented block</br>
+	codio@matrixponcho-carbontemple:~/workspace$</br>
+	</br>
+	The error message indicates an "IndentationError" in the code.</br>
+	Correct indentation is crucial for the structure and readability of the code.</br>
+	The error specifically states that an indented block was expected after line 14, which is the line containing the triple double-quoted string (""").</br>
+	To resolve this error, there needs to be an indented block of code following the line with the triple double-quoted string.</br>
+	</br>
+	Below is the corrected code with the triple double-quoted string indented and on the correct line.</br>
+</br>
+def equivalence_partition(iterable, relation):</br>
+    """</br>
+    Partitions a set of objects into equivalence classes</br>
+</br>
+    Args:</br>
+        iterable: collection of objects to be partitioned</br>
+        relation: equivalence relation. I.e. relation(o1,o2) evaluates to True</br>
+            if and only if o1 and o2 are equivalent</br>
+</br>
+    Returns: classes, partitions</br>
+        classes: A sequence of sets. Each one is an equivalence class</br>
+        partitions: A dictionary mapping objects to equivalence classes</br>
+    """</br>
+    classes = []</br>
+    partitions = {}</br>
+    for o in iterable:  # for each object</br>
+        # find the class it is in</br>
+        found = False</br>
+        for c in classes:</br>
+            if relation(next(iter(c)), o):  # is it equivalent to this class?</br>
+                c.add(o)</br>
+                partitions[o] = c</br>
+                found = True</br>
+                break</br>
+        if not found:  # it is in a new class</br>
+            classes.append(set([o]))</br>
+            partitions[o] = classes[-1]</br>
+    return classes, partitions</br>
+</br>
+</br>
+def equivalence_enumeration(iterable, relation):</br>
+    """</br>
+    Partitions a set of objects into equivalence classes</br>
+</br>
+    Same as equivalence_partition() but also numbers the classes.</br>
+</br>
+    Args:</br>
+        iterable: collection of objects to be partitioned</br>
+        relation: equivalence relation. I.e. relation(o1,o2) evaluates to True</br>
+            if and only if o1 and o2 are equivalent</br>
+</br>
+    Returns: classes, partitions, ids</br>
+        classes: A sequence of sets. Each one is an equivalence class</br>
+        partitions: A dictionary mapping objects to equivalence classes</br>
+        ids: A dictionary mapping objects to the indices of their equivalence classes</br>
+    """</br>
+    classes, partitions = equivalence_partition(iterable, relation)</br>
+    ids = {}</br>
+    for i, c in enumerate(classes):</br>
+        for o in c:</br>
+            ids[o] = i</br>
+    return classes, partitions, ids</br>
+</br>
+def check_equivalence_partition(classes, partitions, relation):</br>
+    """Checks that a partition is consistent under the relationship"""</br>
+    for o, c in partitions.items():</br>
+        for _c in classes:</br>
+            assert (o in _c) ^ (not _c is c)</br>
+    for c1 in classes:</br>
+        for o1 in c1:</br>
+            for c2 in classes:</br>
+                for o2 in c2:</br>
+                    assert (c1 is c2) ^ (not relation(o1, o2))</br>
+</br>
+
+def test_equivalence_partition():</br>
+    relation = lambda x, y: (x - y) % 4 == 0</br>
+    classes, partitions = equivalence_partition(</br>
+        range(-3, 5),</br>
+        relation</br>
+    )</br>
+    check_equivalence_partition(classes, partitions, relation)</br>
+    for c in classes:</br>
+        print(c)</br>
+    for o, c in partitions.items():</br>
+        print(o, ':', c)</br>
+</br>
+
+if __name__ == '__main__':</br>
+    test_equivalence_partition()</br>
+</br>
+
+<b>Exploring Linters to Support Testing in Python: Question 2</b></br>
+</br>
+This is the response when running the code pylintTest.py:</br>
+codio@matrixponcho-carbontemple:~/workspace$ python3 pylintTest.py</br>
+  File "pylintTest.py", line 26</br>
+    print encoded</br>
+                ^</br>
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(encoded)?</br>
+codio@matrixponcho-carbontemple:~/workspace$ python3 pylintTest.py</br>
+Traceback (most recent call last):</br>
+  File "pylintTest.py", line 7, in <module></br>
+    choice = raw_input("would you like to encode or decode?")</br>
+NameError: name 'raw_input' is not defined</br>
+codio@matrixponcho-carbontemple:~/workspace$ python3 pylintTest.py</br>
+</br>
+Line 26 original  – print encoded</br>
+Correction - print (encoded)</br>
+</br>
+Needed the correct parentheses</br>
+</br>
+Line 7  original – choice = raw-input ("would you like to encode or decode?")</br>
+word = raw-input ("Please enter text"))</br>
+</br>
+Correction – </br>
+choice = input ("would you like to encode or decode?")</br>
+word = input ("Please enter text")</br>
+</br>
+Raw input was is not defined in the code only input</br>
+</br>
+</br>
+Exploring Linters to Support Testing in Python: Question 3</br>
+</br>
+SyntaxError: Missing parentheses in call to 'print'. Did you mean print(encoded)?</br>
+codio@matrixponcho-carbontemple:~/workspace$</br>
+</br>
+When you install pip install flake8 it shows the above message in the terminal when ran, it suggests what could be</br>
+	  wrong with the code unlike the pylint it just tells you there is an error on the line of code that needs fixed.</br>
+
+Next when looking over the metricTest.py code there are multiple corrections between syntax errors and indentation.</br>
+	  Firstly, I went through and removed the numbers at the beginning of each line of code, then I went through correcting syntax and indentation</br>
+	  with the help of the flake 8.</br>
+	  </br>
+	  </br>
+<b>Exploring Linters to Support Testing in Python: Question 4</b></br>
+</br>
+
+<i>Run mccabe on sums.py. What is the result?</i></br>
+</br>
+codio@matrixponcho-carbontemple:~/workspace$ pip3 install mccabe</br>
+Collecting mccabe</br>
+  Using cached https://files.pythonhosted.org/packages/27/1a/1f68f9ba0c207934b35b86a8ca3aad8395a3d6dd7921c0686e23853ff5a9/mccabe-0.7.0-py2.py3-none-any.whl</br>
+Installing collected packages: mccabe</br>
+Successfully installed mccabe-0.7.0</br>
+codio@matrixponcho-carbontemple:~/workspace$ python3 sums.py</br>
+Everything passed</br>
+</br>
+This is what is fed back through the terminal but when mccabe is ran it has fixed the problem as shown in the above code.</br>
+</br>
+Run mccabe on sums2.py. What is the result?</br>
+</br>
+codio@matrixponcho-carbontemple:~/workspace$ pip3 install mccabe</br>
+Collecting mccabe</br>
+  Using cached https://files.pythonhosted.org/packages/27/1a/1f68f9ba0c207934b35b86a8ca3aad8395a3d6dd7921c0686e23853ff5a9/mccabe-0.7.0-py2.py3-none-any.whl</br>
+Installing collected packages: mccabe</br>
+Successfully installed mccabe-0.7.0</br>
+codio@matrixponcho-carbontemple:~/workspace$ python3 sums2.py</br>
+Traceback (most recent call last):</br>
+  File "sums2.py", line 12, in <module></br>
+    test_sum_tuple()</br>
+  File "sums2.py", line 8, in test_sum_tuple</br>
+    assert sum((1, 2, 2)) == 6, "Should be 6"</br>
+AssertionError: Should be 6</br>
+For the next question the above is output in the terminal and using mccabe it tells me the assertation error for the number is incorrect</br>
+	  and they do not add up to 6, I corrected the line 8, I changed the number to a 3 so it looked like this assert sum((1, 2, 3)) == 6, "Should be 6"</br>
+</br>
+	  </br>
+<b>What are the contributors to the cyclomatic complexity in each piece of code?</b></br>
+</br>
+Here is a breakdown of the cyclomatic complexity contributors for code sums2.py:</br>
+</br>
+test_sum() function:</br>
+There are no decision points or branching structures within this function.</br>
+The function consists of a single assertion statement.</br>
+test_sum_tuple() function:</br>
+Similar to test_sum(), there are no decision points or branching structures within this function.</br>
+The function also consists of a single assertion statement.</br>
+if __name__ == "__main__": block:</br>
+This block is not a function but rather the entry point of the script.</br>
+There are no decision points or branching structures within this block.</br>
+The block simply calls the test_sum() and test_sum_tuple() functions and prints a message.</br>
+Overall, the cyclomatic complexity of this code is low because there are no explicit decision points or branching structures.</br>
+	  The code primarily focuses on asserting the correctness of the sums and displaying a success message if all assertions pass.</br>
+</br>
+<i>Overall Complexity for pylintTest.py:</i></br>
+</br>
+The code contains nested structures, including an outer if statement and an inner for loop.</br>
+The presence of nested decision points and branching structures contributes to the overall cyclomatic complexity.</br>
+Outer if statement (lines 6-9):</br>
+The if statement introduces a decision point based on the user's choice.</br>
+The presence of the if statement increases the cyclomatic complexity.</br>
+Inner for loop (lines 10-19):</br>
+The for loop iterates over each character in the input word.</br>
+Within the loop, there is an if-else structure that checks if the current character is a space or not.</br>
+The if-else structure adds decision points and branches, contributing to the cyclomatic complexity.</br>
+Nested if statements (lines 12-18):</br>
+Within the inner for loop, there are nested if statements.</br>
+The first if statement checks if the current character is a space and handles it differently.</br>
+The second if statement, which is incorrectly indented, checks if the choice is "decode" and performs decoding operations.</br>
+	  However, due to the incorrect indentation, it is nested within the first if statement, causing a logical issue.</br>
+
+</br>
+<i>Overall Complexity for metricTest.py:</i></br>
+</br>
+Code with the fn function:</br>
+The function fn consists of a single statement (return x + y).</br>
+There are no decision points or branching structures within this function.</br>
+Therefore, the cyclomatic complexity of this function is low.</br>
+Code with the find_optimal_route_to_my_office_from_home function:</br>
+The initial check if d <= 30 introduces a decision point.</br>
+The if-elif structure on lines 11-23 adds complexity due to multiple branches.</br>
+Nested if statements within the outer if statement on lines 11-18 further contribute to the cyclomatic complexity.</br>
+The presence of multiple levels of nesting and different conditions increases the overall cyclomatic complexity of the function.</br>
+Code with the C and D classes:</br>
+The C class does not have any methods defined, so it does not introduce additional complexity.</br>
+The D class inherits from C and overrides the __init__, f, and g methods.</br>
+The overridden f method introduces a decision point with an if-else structure.</br>
+The overridden g method also introduces a decision point with an if-else structure.</br>
+The presence of these decision points in the overridden methods contributes to the cyclomatic complexity of the D class.</br>
+Overall, the cyclomatic complexity varies across the different pieces of code. Functions or methods with decision points, branching structures,</br>
+	and nested conditions tend to have higher cyclomatic complexity. On the other hand, functions or methods with linear control
+	flow and no decision points have lower cyclomatic complexity.</br>
+</br>
+	</br>
+	<strong>Unit 7: Introduction to Operating Systems</strong></br>
 	</br>
 	<strong>Unit 8: Cryptography and Its Use in Operating Systems</strong>
 	</br>

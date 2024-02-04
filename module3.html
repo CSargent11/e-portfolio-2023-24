@@ -242,6 +242,90 @@ References:
 	2016 IEEE International Conference on Software Testing, Verification and Validation (ICST) [Preprint]. doi:10.1109/icst.2016.29.</i>
 </br>
 	</br>
+	<b>The Producer-Consumer Mechanism Questions</b>
+	</br>
+	<i>1.	How is the queue data structure used to achieve the purpose of the code?</i></br>
+</br>
+	In the provided code, the `Queue` data structure from the `queue` module is used to facilitate communication and coordination between the producer and consumer threads. 
+	</br>
+	</br>
+	<i>2.	What is the purpose of q.put(I)?</i></br>
+	</br>
+	`q.put(i)`: The purpose of `q.put(i)` is to add an item (`i`) to the queue. In this code, the producer thread (`producer()`) iterates over a range of numbers and puts each number into the queue (`q`).
+	This simulates producing items and adding them to the shared queue for consumption by the consumer threads.
+	</br>
+	</br>
+	<i>3.	What is achieved by q.get()?</i></br>
+	</br>
+	`q.get()`: The function `q.get()` is used by the consumer threads to retrieve an item from the queue. In this code, the consumer threads (`consumer()`)
+	continuously fetch items from the queue (`q`) using `q.get()`. The consumer threads will block if the queue is empty until an item becomes available for consumption.
+	</br>
+	</br>
+	<i>4.	What functionality is provided by q.join()?</i></br>
+</br>
+	`q.join()`: The `q.join()` function is used to block until all items in the queue have been processed and marked as done using `q.task_done()`.
+	This ensures that the producer waits until all items have been consumed and processed by the consumer threads before proceeding.
+	In other words, the `q.join()` call blocks the main thread until the queue is empty and all tasks are marked as done.
+	</br>
+	</br>
+	<i>5.	Extend this producer-consumer code to make the producer-consumer scenario available in a secure way.</br>
+	What technique(s) would be appropriate to apply?</i></br>
+	</br>
+	By using the `Queue` data structure, the producer and consumer threads can safely communicate and coordinate their actions.
+	The producer adds items to the queue, and the consumer threads retrieve items from the queue, process them, and mark them as done.
+	The `Queue` ensures that the operations are synchronised and thread-safe, preventing potential race conditions or conflicts between the threads.
+	</br>
+	</br>
+
+from threading import Thread</br>
+from queue import Queue</br>
+from multiprocessing import Lock</br>
+</br>
+q = Queue()</br>
+final_results = []</br>
+lock = Lock()</br>
+</br>
+def producer():</br>
+    for i in range(100):</br>
+        q.put(i)</br>
+ </br>       
+def consumer():</br>
+    while True:</br>
+        number = q.get()</br>
+        result = (number, number**2)</br>
+        with lock:</br>
+            final_results.append(result)</br>
+        q.task_done()</br>
+</br>
+  </br>      
+def run_producer_consumer():</br>
+    # Start consumer threads</br>
+    for i in range(5):</br>
+        t = Thread(target=consumer)</br>
+        t.daemon = True</br>
+        t.start()</br>
+    </br>
+    producer()</br>
+   </br> 
+    # Wait for all tasks to be processed</br>
+    q.join()</br>
+    </br>
+    # Print final results</br>
+    print(final_results)</br>
+</br>
+</br>
+In the extended code, the following techniques have been applied:</br>
+</br>
+1. **Threading**: The code utilises the `Thread` class from the `threading` module to implement concurrent execution.
+	The `consumer` function is executed in multiple threads, allowing for parallel processing of items from the queue.</br>
+</br>
+2. **Queue**: The `Queue` class from the `queue` module is used to facilitate communication and synchronisation between the producer and consumer threads.
+	The `Queue` provides a thread-safe way to store and retrieve items, ensuring proper coordination in the producer-consumer scenario.</br>
+</br>
+3. **Locking**: The `Lock` class from the `multiprocessing` module is used to create a lock object (`lock`) that is used to protect access to the `final_results` list.
+	By using the `with lock` statement, only one thread can append a result to the `final_results` list at a time, preventing potential conflicts or race conditions.</br>
+</br>
+	</br>
 	<strong>Unit 5: An Introduction to Testing</strong></br>
 	</br>
 	<b>Exploring the Cyclomatic Complexity’s Relevance Today</b></br>

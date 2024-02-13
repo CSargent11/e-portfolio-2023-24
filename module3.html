@@ -646,11 +646,84 @@ Overall, the cyclomatic complexity varies across the different pieces of code. F
 	</br>
 	Saltzer, J. H. & Schroeder, M. D. (1975) The protection of information in computer systems. Proceedings of the IEEE. [Online] 63 (9), 1278–1308.</br>
 	</br>
+</br>
+
+	<b>Distributed API</b></br>
+	</br>
+	<i>Question 1:
+	</br>
+	Run the API.py code. Take a screenshot of the terminal output.
+	What command did you use to compile and run the code?</i>
+</br>
+	To access the API endpoints I used a web browser and made requests programmatically with Postman.
+	</br>
+	The server is running locally on port 5000, which can be accessed by navigating to http://127.0.0.1:5000/user/<name> in your web browser or by making HTTP requests to that URL.
+		</br>
+		The endpoints available in this code are:
+		</br>
+		GET /user/<name>: Retrieves information about a user by their name.
+			</br>
+			POST /user/<name>: Creates a new user with the specified name, age, and occupation.
+				</br>
+				PUT /user/<name>: Updates the information (age and occupation) of an existing user.
+					</br>
+					DELETE /user/<name>: Deletes a user by their name.
+						</br>
+
+	<i>Question 2:
+	</br>
+	Run the following command at the terminal prompt: w3m http://127.0.0.1:5000/user/Ann
+	</br>
+	What happens when this command is run, and why?</i>
 	</br>
 	<img src="images/API7.png" alt="API"class="fit-page">
+</br>
+</br>
+	<i>Question 3: Run the following command at the terminal prompt: w3m http://127.0.0.1:5000/user/Adam
+		What happens when this command is run, and why?</i>
+</br>
 	<img src="images/API72.png" alt="API"class="fit-page">
 	</br>
 </br>
+	<i>Question 4: What capability is achieved by the flask library?</i>
+	</br>
+	The code demonstrates the use of the Flask library to create a simple RESTful API.
+	The capabilities achieved by the Flask library in this code include:</br>
+</br>
+Web Application Framework:</br>
+Flask serves as a web application framework, providing a structure for building web applications and APIs in Python.
+</br>
+Routing:</br>
+Flask allows you to define routes using decorators (@app.route) to associate URL patterns with specific functions.
+In this code, the User resource is associated with the endpoint /user/<string:name>.
+</br>
+RESTful API Development:</br>
+Flask, along with the Flask-RESTful extension, supports the development of RESTful APIs.
+The code defines HTTP methods (GET, POST, PUT, DELETE) for managing user information (CRUD operations).
+</br>
+HTTP Request Handling:</br>
+Flask provides tools for handling HTTP requests. The reqparse.RequestParser class is used to parse and validate request arguments.
+This is crucial for processing data sent in the request body or URL parameters.
+</br>
+HTTP Response Handling:</br>
+Flask facilitates the creation of HTTP responses.
+Depending on the request, the code returns data along with appropriate status codes (e.g., 200 for success, 404 for not found, 400 for a bad request).
+</br>
+Dynamic URL Routing:</br>
+Flask allows dynamic URL routing by including variable parts in the URL pattern (e.g., <string:name>).
+These variable parts can be extracted and used as parameters in the corresponding view function.
+</br>
+Development Server:</br>
+Flask includes a development server (app.run(debug=True)) that allows you to test your application locally during development.
+The server automatically reloads when changes are made to the code.
+</br>
+JSON Serialisation:</br>
+The code uses Flask to automatically serialise Python dictionaries into JSON format when returning responses.
+This is a common feature in building APIs.</br>
+In summary, the Flask library in this code enables the creation of a RESTful API with capabilities for handling HTTP requests,
+defining routes, managing resources, and providing a simple development server.</br>
+	</br>
+
 	<b>Exploring a simple Python shell</b></br>
 	</br>
 	

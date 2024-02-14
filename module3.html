@@ -769,6 +769,42 @@ defining routes, managing resources, and providing a simple development server.<
 	<img src="images/U82.png" alt="Discussion Post"class="fit-page">
 	<img src="images/U83.png" alt="Discussion Post"class="fit-page">
 	<img src="images/U84.png" alt="Discussion Post"class="fit-page">
+	</br>
+	</br>
+	
+	Unit 8 Seminar
+	</br>
+	</br>
+	
+	Title: Cryptography Programming Exercise </br>
+	
+	Why did you select the algorithm you chose? </br>
+	
+	I selected the algorithm in the provided code because it uses the AES (Advanced Encryption Standard) algorithm,
+	which is widely recognised as a secure and efficient symmetric encryption algorithm.</br>
+	</br>
+	AES Security is a well-established encryption standard and is widely used for securing sensitive data.
+	It has withstood extensive cryptanalysis and is considered secure for a wide range of applications.
+	</br>
+	Key Derivation Function (PBKDF2): The code uses PBKDF2 for key derivation, which is a key stretching algorithm that adds an extra layer of
+	security by making it computationally expensive to derive the key. This helps protect against brute force attacks.
+	</br>
+	Initialisation Vector (IV): The use of a random IV for each encryption adds another layer of security.
+	The IV ensures that even if the same plaintext is encrypted multiple times with the same key, the resulting ciphertext will be different.
+	</br>
+	Padding: The code uses PKCS7 padding to ensure that the plaintext is properly aligned with the block size of the AES algorithm.
+	Proper padding is essential for encryption algorithms to work correctly.
+	</br>
+	Cryptographic Library: The code uses the Crypto library, which is a well-established library for cryptographic operations.
+	It provides a high-level interface for encryption and follows best practices in cryptography.
+</br>
+	</br>
+	Would it meet the GDPR regulations? Justify your answer.
+	</br>
+	The provided code using AES encryption with a key derived from a password using PBKDF2 is a step in the right direction for securing sensitive data,
+	and it aligns with the general principles of data protection, including those outlined in GDPR. However, meeting GDPR regulations involves more than
+	just implementing encryption; it requires a holistic approach to data protection.
+	</br>
 	
 	</br>
 	<strong>Unit 9: Developing an API for a Distributed Environment</strong>

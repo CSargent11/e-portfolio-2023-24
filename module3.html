@@ -822,9 +822,56 @@ defining routes, managing resources, and providing a simple development server.<
 	</br>
 	<strong>Unit 10: From Distributed Computing to Microarchitectures</strong>
 	</br>
-	Faceted Data
-	</br>
-	</br>
+</br>
+	Unit 10: Faceted Data
+
+
+Read Schmitz et al (2016) article about faceted data.
+Do you think this is a good approach to protect systems from data leakage? What are the pros and cons?
+
+Faceted data, also known as data masking or data anonymisation, is an approach where sensitive information in a dataset is replaced or modified to protect privacy and prevent data leakage. While faceted evaluation cannot be parallelised as easily, it avoids many redundant calculations, thereby improving efficiency (Schmitz et al, 2016). 
+
+Pros:
+
+Fine-Grained Control:
+Information flow control allows for fine-grained control over how data propagates through a system. Facets or labels can be used to specify and control the visibility of information based on security or confidentiality levels.
+
+Dynamic Adaptability:
+The dynamic aspect suggests that the information flow control can adapt during runtime based on changing conditions or system states. This flexibility can be valuable in dynamic environments.
+
+Formal Security Guarantees:
+The use of monads and formal methods in conjunction with information flow control can provide a more rigorous and formal approach to ensuring security guarantees. This is particularly important in sensitive systems.
+
+Programming Language Integration:
+If implemented in a programming language, this approach could potentially integrate seamlessly into the development process, allowing developers to express and enforce security policies directly in their code.
+
+
+Cons:
+
+Complexity and Learning Curve:
+Information flow control mechanisms and monads can introduce complexity to the development process. Developers may need to learn and understand these concepts, potentially leading to a steeper learning curve.
+
+Performance Overheads:
+Depending on the implementation, the runtime enforcement of information flow control can introduce performance overhead. This is particularly relevant if the system has a high volume of dynamic data flows.
+
+
+Potential for Over-Engineering:
+In some cases, the complexity introduced by information flow control mechanisms and monads might be seen as over-engineering for certain types of applications. Not all systems require such fine-grained control over information flow.
+
+Practical Challenges:
+Implementing and maintaining dynamic information flow control in real-world systems can pose practical challenges. Handling complex scenarios and edge cases may require additional effort.
+
+Developer Adoption:
+Developers may find it challenging to adopt and apply information flow control consistently across a large codebase. Ensuring that the policies are correctly implemented and maintained could be a potential challenge.
+
+Potential for False Positives/Negatives:
+Depending on the precision of the information flow control mechanisms, there is a risk of false positives (restricting data flows unnecessarily) or false negatives (allowing unintended data flows).
+
+
+Conclusion:
+In summary, the implementation of the faceted values technique is seen as a library rather than a language extension. The implementation utilises two monads to track both explicit and implicit information flows, building on previous work in the field. This approach showcases how faceted values appear in a typed context and demonstrates their implementation as a library rather than a built-in language feature. The article also highlights the nuanced interactions between the two monads.
+The suitability of this approach depends on the specific requirements, the nature of the system, and the trade-offs that can be made. While it may be a valuable tool for securing systems with stringent security requirements, it may not be necessary for all applications. As with any security measure, a thorough risk assessment and consideration of the system's needs are essential (Schmitz et al, 2016).
+
 	Do you think this is a good approach to protect systems from data leakage? What are the pros and cons?
 	</br>
 	Create a basic outline design of how you would create such a system in Python. 

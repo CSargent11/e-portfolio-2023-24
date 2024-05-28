@@ -62,7 +62,9 @@
 <body>
 	<button type="button" class="collapsible">Unit 1</button>
 <div class="content">
-  <p> Unit 1: Introduction to Software Engineering Project Management</p>
+  <p><b>Unit 1: Introduction to Software Engineering Project Management</b></br>
+</br>	
+  </p>
 </div> 
 	
 	<button type="button" class="collapsible">Unit 2</button>
@@ -72,7 +74,39 @@
 	
 	<button type="button" class="collapsible">Unit 3</button>
 <div class="content">
-	<p>Unit 3: Estimating, Planning and Risk</p>
+	<p>Unit 3: Estimating, Planning and Risk
+		</br>	
+  Read Dicheva & Hodge (2018). Think about an online system which you use on a daily basis.
+	Consider how it might operate at the back-end using data structures.
+	This will inform our discussion during next week’s seminar.</br>
+
+Let's consider an online shopping platform like Amazon as an example.
+	At the backend, such a system would likely involve several data structures to manage various aspects of the platform:</br>
+	</br>
+	1. User Authentication and Authorisation: A data structure such as a hash table or a database table would be used to store user credentials (username, password) securely for authentication purposes.</br>
+	Additionally, access control lists (ACLs) could be used to manage user permissions and roles (Silberschatz, 2018).</br>
+	</br>
+	2. Product cata-log: The product cata-log would require efficient data structures to store information about products, such as their names, descriptions, prices, and availability.</br>
+	A relational database or a document-oriented database could be used to organise this data effectively.</br>
+	</br>
+	3. User Shopping Cart: When a user adds items to their shopping cart, a data structure like a session object or a temporary database table could be used to store the selected items.</br>
+	This allows users to browse the website without losing their selected items (Korth and Silberschatz, et al. 2010).</br>
+	</br>
+	4. Order Management: Once a user proceeds to checkout, their order details need to be stored temporarily until the transaction is completed.</br>
+	A data structure like a queue or a stack could be used to manage orders in a first-in-first-out (FIFO) or last-in-first-out (LIFO) fashion (Elmasri and Navathe, 2017).</br>
+	</br>
+	5. Transaction History: Completed orders and transaction history need to be stored for record-keeping and analytics purposes.</br>
+	A database table or a NoSQL database could be used to store this information efficiently, allowing for easy retrieval and analysis.</br>
+	</br>
+	These are just a few examples of how data structures could be used at the backend of an online system like Amazon.
+	The specific choice of data structures would depend on factors such as the size of the system, performance requirements, and scalability considerations.</br>
+	</br>
+	References:</br>
+	</br>
+	Elmasri, R. and Navathe, S.B., 2017. Fundamentals of Database Systems. 7th ed. Boston: Pearson.</br>
+	Korth, H.F. and Silberschatz, A., 2010. Database System Concepts. 6th ed. New York: McGraw-Hill.</br>
+	Silberschatz, A., Galvin, P.B. and Gagne, G., 2018. Operating System Concepts. 10th ed. Hoboken: Wiley.</br></p>
+	
 </div>
 	
 	<button type="button" class="collapsible">Unit 4</button>

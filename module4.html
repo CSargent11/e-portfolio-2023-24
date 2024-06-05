@@ -170,7 +170,59 @@
 
 		<button type="button" class="collapsible">Unit 3</button>
 <div class="content">
-	<p>Unit 3: Vulnerability Assessmentsy</p>
+	<p><b>Unit 3: Vulnerability Assessmentsy</b></br>
+</br>
+	<i>Reflection on Scanning Activit</i>y</br>
+	1. Did you have any issues or challenges with the scans?</br>
+	Yes, several issues were encountered during the scanning activity:</br>
+	Traceroute Incompletion: The `traceroute` command did not complete successfully and many steps returned no response.</br>
+	nslookup Command Issue: The initial attempt to run `nslookup` failed due to a syntax error.</br>
+	Permission Errors: There were errors related to permissions, specifically when attempting to access certain directories.</br>
+	</br>
+	2. How did you overcome them?</br>
+	Traceroute Incompletion: Although the `traceroute` command did not complete all hops, it still provided partial data which could be used for analysis up to the last responsive hop.</br>
+	nslookup Command Issue: Re-running the `nslookup` command correctly without the erroneous pattern fixed the issue.</br>
+	Permission Errors: By avoiding operations that required directory access permissions, and focusing on commands that do not have such dependencies, further progress was made.</br>
+	</br>
+	3. How will they affect your final report?</br>
+	The issues encountered will affect the comprehensiveness and accuracy of the final report in the following ways:</br>
+	Incomplete Traceroute Data: The final report will not have a complete hop count or full path analysis, which limits the insight into network delays and routing paths.</br>
+	Partial Information: The final report may lack some detailed information that could have been obtained if all commands ran flawlessly.</br>
+	Adapted Recommendations: The recommendations in the report will need to include suggestions for addressing the challenges encountered, such as using alternative tools or ensuring correct command usage.</br>
+	</br>
+	<i>Final Report</i></br>
+	</br>
+	Traceroute Analysis</br>
+	Number of Hops**: The traceroute to `ginandjuice.shop` identified up to 6 hops before responses stopped.</br>
+	Biggest Delay: The biggest delay observed was on the fourth hop, `31.55.185.176`, with a maximum delay of 36.379 ms.</br>
+	</br>
+	DNS Information:</br>
+	Nameservers:</br>
+	- `ns-1000.awsdns-61.net`</br>
+	- `ns-1543.awsdns-00.co.uk`</br>
+	- `ns-1496.awsdns-59.org`</br>
+	- `ns-110.awsdns-13.com`</br>
+</br>
+	Registered Contact:</br>
+	Organisation: GMO Registry, Inc.</br>
+	  - Address: Cerulean Tower, 26-1 Sakuragaoka-cho, Shibuya-ku Tokyo 150-8512, Japan</br>
+	  - Phone: +81354561601</br>
+	  - Email: newgtld@gmoregistry.com</br>
+	</br>
+	MX Records: No MX records were found for `ginandjuice.shop`.</br>
+	Website Hosting Information:</br>
+	- IP Addresses:</br>
+	- 34.246.169.176</br>
+	- 34.249.203.140</br>
+	</br>
+	Hosting Provider: The IP addresses indicate the website is hosted on Amazon Web Services (AWS).</br>
+	Recommendations:</br>
+1. Further Investigation: Conduct a deeper investigation into the traceroute issue to determine if network firewalls or security groups are blocking the trace.</br>
+2. Permission Fixes: Resolve permission errors on the local machine to ensure smoother execution of commands.</br>
+3. Alternative Tools: Consider using other network diagnostic tools like `mtr` (My Traceroute) for more comprehensive and continuous path analysis.</br>
+By addressing these issues, future scans can be more complete and provide more detailed insights.</br>
+</br>
+	</p>
 </div>
 
 		<button type="button" class="collapsible">Unit 4</button>

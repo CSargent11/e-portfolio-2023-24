@@ -257,6 +257,143 @@ By addressing these issues, future scans can be more complete and provide more d
 <body>
 		<img src="images/M5U41.png" alt="Initial Post"class="fit-page">
 		<img src="images/M5U42.png" alt="Initial Post"class="fit-page">
+</br>
+Scanning activity – 
+	</br>
+Security Analysis Summary for ginandjuice.shop</br>
+	</br>
+1. Operating System:</br>
+Likely running a Unix-like operating system, probably Linux, based on web server software and hosting environment.</br>
+</br>
+2. Web Server Software:</br>
+The website is running `nginx` web server software.</br>
+</br>
+3. Content Management System (CMS):</br>
+CMS not identified. Further scans are required to determine if a CMS like WordPress or Drupal is being used.</br>
+</br>
+4. Protection:</br>
+The site uses AWS Elastic Load Balancing (ELB) for load balancing and basic network-level protection.</br>
+SSL/TLS certificates are in place, indicating encryption of data in transit.</br>
+</br>
+5. Hosting:</br>
+The website is hosted on Amazon Web Services (AWS) EC2 instances in the `eu-west-1` region (Ireland).</br>
+</br>
+6. Open Ports:</br>
+Port 80 (HTTP) and Port 443 (HTTPS) are open, as expected for web traffic.</br>
+</br>
+7. Vulnerabilities:</br>
+• Patching Critical Vulnerabilities: Immediate attention to high-severity vulnerabilities.</br>
+• Deploying a WAF: Protects against common web attacks.</br>
+• Strengthening Input Validation: Prevents injection attacks.</br>
+• Enhancing Authentication Mechanisms: Implements multi-factor authentication (MFA).</br>
+• Securing Server Configurations: Hardens security settings.</br>
+• Regular Security Audits and Training: Ensures ongoing security posture.</br>
+	</br>
+Vulnerability Type       	Affected URL(s)    	Severity Rating
+Cross-site scripting (XSS)	/about, /blog, /my-account	High
+SQL Injection	/catalog, /catalog/product	High
+External service interaction (DNS)	/logger	Medium
+Client-side template injection	/blog, /my-account	High
+</br>
+	</br>
+8. Software Versions:</br>
+Exact versions of software were not detected. The SSL certificate is valid from January 21, 2024, to February 19, 2025.</br>
+</br>
+Recommendations:</br>
+1. Run Additional Scans:</br>
+Use `whatweb`, `wpscan`, and `nikto` to identify CMS details and specific vulnerabilities.</br>
+</br>
+2. Regular Updates:</br>
+Ensure server software, including nginx, is regularly updated to the latest versions.</br>
+</br>
+3. Enhanced Security Measures:</br>
+Implement additional security measures like Web Application Firewalls (WAF) and Intrusion Detection Systems (IDS).</br>
+</br>
+4. SSL/TLS Best Practices:</br>
+Regularly update SSL/TLS certificates and use strong encryption protocols.</br>
+</br>
+Conclusion:</br>
+Initial scans provided insights into the server's operating system, web server software, protection mechanisms, and hosting details.
+	Further scans are needed to identify more specific vulnerabilities and ensure comprehensive security.</br>
+</br>
+	</br>
+<b>Report on Security Analysis of ginandjuice.shop</b></br>
+	</br>
+ Summary:</br>
+This report provides an overview of the findings from various security scans conducted on the website ginandjuice.shop.
+The scans aimed to gather detailed information on the website's operating system, web server software, content management system (CMS), protection mechanisms,
+hosting details, open ports, and any known vulnerabilities.</br>
+</br>
+Scan Details and Findings:</br>
+1. Operating System and Web Server Software:</br>
+Operating System: The website appears to be hosted on a Linux-based operating system, given the presence of `nginx` web server software, which is commonly used on Unix-like systems (Nmap, 2024).</br>
+Web Server Software: The website is running `nginx` as indicated by the Nmap scan results (Nmap, 2024).</br>
+</br>
+2. Content Management System (CMS):</br>
+The CMS could not be directly identified due to the unavailability of `whatweb` and `wpscan` commands.
+	Further investigation with these tools or manual inspection of the website's HTML source and directory structure may be necessary.</br>
+</br>
+2. Protection Mechanisms (CDN, Proxy, Firewall):</br>
+The web server header indicates the use of `awselb/2.0`, which suggests that the website is behind Amazon Web Services Elastic Load Balancing.
+	This service can provide load balancing and basic protection against some network-level attacks (Nmap, 2024).
+	The presence of SSL/TLS certificates indicates encryption of data in transit, enhancing security against eavesdropping and man-in-the-middle attacks (Nmap, 2024).</br>
+</br>
+4. Hosting Details:</br>
+The IP addresses `34.249.203.140` and `34.246.169.176` are associated with AWS (Amazon Web Services) EC2 instances located in the `eu-west-1` region (Ireland) (Nmap, 2024; Nslookup, 2024).</br>
+Whois Information:</br>
+The domain `ginandjuice.shop` is registered with GoDaddy.com LLC and is set to expire on January 12, 2027 (Whois, 2024).</br>
+</br>
+5. Open Ports:</br>
+Port 80 (HTTP): Open and running nginx web server (Nmap, 2024).</br>
+ Port 443 (HTTPS): Open and running nginx web server with SSL/TLS encryption (Nmap, 2024).</br>
+</br>
+6. Known Vulnerabilities:</br>
+• Patching Critical Vulnerabilities: Immediate attention to high-severity vulnerabilities.</br>
+• Deploying a WAF: Protects against common web attacks.</br>
+• Strengthening Input Validation: Prevents injection attacks.</br>
+• Enhancing Authentication Mechanisms: Implements multi-factor authentication (MFA).</br>
+• Securing Server Configurations: Hardens security settings.</br>
+• Regular Security Audits and Training: Ensures ongoing security posture.</br>
+	</br>
+Vulnerability Type       	Affected URL(s)    	Severity Rating
+Cross-site scripting (XSS)	/about, /blog, /my-account	High
+SQL Injection	/catalog, /catalog/product	High
+External service interaction (DNS)	/logger	Medium
+Client-side template injection	/blog, /my-account	High
+</br>
+7. Software Versions and Patch Status:</br>
+nginx Web Server: The specific version of nginx was not detected. Identifying the exact version is crucial to check for known vulnerabilities and ensure it is up-to-date.</br>
+SSL Certificate:</br>
+Valid From: January 21, 2024</br>
+ Valid To:** February 19, 2025 (Nmap, 2024).</br>
+</br>
+Issues and Challenges:</br>
+Command Availability: Some commonly used tools (`whatweb`, `wpscan`, `nikto`) were not available in the current environment, limiting the scope of the scans.</br>
+Overcoming Challenges: Basic scans with `nmap` provided significant insights. To overcome the limitations,
+installing the missing tools or using alternative methods such as manual inspection or other security tools available in the environment is recommended.</br>
+</br>
+Impact on Final Report:</br>
+The unavailability of certain tools limited the ability to identify the CMS, specific software versions, and detailed vulnerability information.
+The final report provides a general overview based on available data but lacks specific CMS-related vulnerabilities and detailed version-specific issues.
+Future scans with the complete set of tools will provide a more comprehensive analysis.</br>
+</br>
+Recommendations:</br>
+1. Run Additional Scans:</br>
+Install and run `whatweb`, `wpscan`, and `nikto` to identify CMS details and more specific vulnerabilities.</br>
+</br>
+2. Regular Updates:</br>
+Ensure that all server software, including nginx, is regularly updated to the latest versions to mitigate known vulnerabilities.</br>
+</br>
+3. Enhanced Security Measures:</br>
+ Consider implementing additional security measures such as Web Application Firewalls (WAF), Intrusion Detection Systems (IDS), and regular security audits.</br>
+</br>
+4. SSL/TLS Best Practices:</br>
+Regularly update and renew SSL/TLS certificates and ensure the use of strong encryption protocols.</br>
+</br>
+Conclusion</br>
+The initial scans provided valuable insights into the server's operating system, web server software, protection mechanisms, and hosting details.
+	However, further scans with the appropriate tools are necessary to identify specific vulnerabilities and ensure comprehensive security coverage.</br>
+	</br>
 	</p>
 </div>
 	<button type="button" class="collapsible">Unit 5</button>

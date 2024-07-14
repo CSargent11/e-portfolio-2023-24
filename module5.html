@@ -353,6 +353,56 @@ Barafort, B., Mesquida, A.L., Mas, A., Peris-Ferrer, N. and O’Connor, R.V., 20
 	Integrating risk management in IT settings from ISO standards and management systems perspectives. *Computer Standards & Interfaces*, 56, pp.103-112.</br>
 Kirvan, P., 2021. How to implement an IT risk management framework. *TechTarget*.
 	Available at: https://www.techtarget.com/searchsecurity/definition/IT-risk-management-framework</br>
+</br>
+	</br>
+	<b>Unit 4 Seminar Activities</b></br>
+</br>
+Title: DR Solutions Design and Review</br>
+</br>
+Activity 1: DR Terms and Concepts</br>
+Read Alhazmi & Malaiya (2013) and then answer the following questions:</br>
+1. What is the difference between Hot Standby, Warm Standby and Cold Standby? Frame your answers in terms of availability, RPO and RTO.</br>
+2. Does the technology deployed affect the options available? For example, can you create a high availability, hot standby solution between two on-premise data centres?</br>
+Justify and support your answers with appropriate references from academic journals and sources.
+	Add you answers to your e-portfolio and be prepared to share them in this week’s seminar.</br>
+</br>
+Q1. Difference between Hot Standby, Warm Standby, and Cold Standby</br>
+	</br>
+Hot Standby:</br>
+• Availability: High</br>
+• RPO (Recovery Point Objective): Near zero</br>
+• RTO (Recovery Time Objective): Near zero</br>
+• Description: In a hot standby setup, the secondary system runs concurrently with the primary system, constantly mirroring the data and operations.
+	This means that if the primary system fails, the secondary system can take over almost immediately with minimal to no data loss.</br>
+</br>
+Warm Standby:</br>
+• Availability: Moderate to High</br>
+• RPO (Recovery Point Objective): Low</br>
+• RTO (Recovery Time Objective): Short</br>
+• Description: In a warm standby setup, the secondary system is kept updated periodically.
+	It is not actively running but is in a ready state that can be brought online quickly in case of a primary system failure.
+	Some data loss may occur depending on the frequency of updates.</br>
+</br>
+Cold Standby:</br>
+• Availability: Low</br>
+• RPO (Recovery Point Objective): High</br>
+• RTO (Recovery Time Objective): Long</br>
+• Description: In a cold standby setup, the secondary system is off and requires manual intervention to start up and sync with the latest backup.
+	This results in a longer downtime and potentially more data loss since the last backup.</br>
+</br>
+Q2. Effect of Technology on Standby Options</br>
+High Availability and Hot Standby between Two On-Premise Data Centres:</br>
+• Feasibility:  Yes, it is possible to create a high availability, hot standby solution between two on-premise data centres.
+	However, it requires significant investment in infrastructure and robust network connectivity to ensure continuous data replication and minimal latency.</br>
+Technology Considerations:
+• Data Replication: Technologies like synchronous replication are crucial to ensure that both data centres are in sync.</br>
+• Network Infrastructure: A high-speed, low-latency network connection is essential for real-time data replication.</br>
+• Failover Mechanisms: Automated failover mechanisms must be in place to switch operations seamlessly in case of a failure.</br>
+</br>
+<i>References</i></br>
+Alhazmi, O.H. & Malaiya, Y.K., 2013. Evaluating disaster recovery plans using the analytical hierarchy process.
+	*Journal of Information Systems Education*, 24(1), pp.25-33.
+
 </p>
 	</div>
 	

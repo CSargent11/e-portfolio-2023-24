@@ -492,14 +492,126 @@ Literature Review Outline:</br>
 </head>
 			<body>
     <img src="images/M7U7.png" alt="Initial Post"class="fit-page">
+				
+		<b>Compulsory e-Portfolio Component (Hypothesis Testing and Summary Measures):
+				Review the additional notes on Inference and then complete the Hypothesis Testing and Summary Measures worksheet in Excel or LibreOffice.</b>
+		</br>
+		<i>Hypothesis Testing</i></br>
+			<b>7.1 Suppose instead a one-tailed test had been conducted to determine whether Filter Agent 1 was the more effective.
+			What would your conclusions have been?</br>
+			</br>
+			In the previous exercise, a two-tailed test was used to test whether there was a difference in the population mean impurity between two filtration agents.
+				Now, if a one-tailed test were conducted to determine if Filter Agent 1 was more effective
+				(i.e., whether the mean impurity for Filter Agent 1 is significantly lower than that for Filter Agent 2),
+				the steps and conclusions would change slightly.</b></br>
+				</br>
+				Interpretation for a One-Tailed Test:</br>
+				1.Hypotheses:</br>
+				o Null Hypothesis (H₀): The mean impurity of Filter Agent 1 is greater than or equal to that of Filter Agent 2:</br>
+				H0:μ1≥μ2H₀: \mu_1 \geq \mu_2H0:μ1≥μ2</br>
+				o Alternative Hypothesis (H₁): The mean impurity of Filter Agent 1 is less than that of Filter Agent 2:</br>
+				H1:μ1<μ2H₁: \mu_1 < \mu_2H1:μ1<μ2</br>
+				o In this case, we're only interested in whether Filter Agent 1 is more effective (i.e., has a lower impurity level),
+					not simply whether they are different.</br>
+				</br>
+					P-Value and Conclusion:</br>
+					o Since this is now a one-tailed test, the p-value calculated in the two-tailed test would need to be halved,
+					as we are now only concerned with one direction (Filter Agent 1 being more effective).</br>
+					o If the resulting one-tailed p-value is less than the significance level (usually 0.05),
+					we would reject the null hypothesis and conclude that Filter Agent 1 is more effective
+					(i.e., it has a significantly lower impurity than Filter Agent 2).</br>
+					o If the p-value is greater than 0.05, we would fail to reject the null hypothesis,
+					meaning there is insufficient evidence to conclude that Filter Agent 1 is more effective.</br>
+					</br>
+					3. Potential Conclusion:</br>
+					o If the two-tailed test previously showed that the difference between the agents was statistically significant,
+					it's very likely that the one-tailed test would show that Filter Agent 1 is more effective
+					(assuming the mean impurity for Filter Agent 1 was indeed lower).</br>
+					o If the two-tailed test was not significant, the one-tailed test could also be non-significant,
+					leading to the conclusion that there is no strong evidence to suggest that Filter Agent 1 is more effective than Filter Agent 2.</br>
+					</br>
+					Final Thoughts:</br>
+					The outcome of the one-tailed test would depend on the specific p-value from the original test.
+					However, if the two-tailed test showed a significant difference, a one-tailed test would reinforce that Filter
+					Agent 1 is more effective, as long as its mean impurity was lower than Filter Agent 2's.</br>
+					</br>
+					</br>
 
-			Unit Summary:
-This unit covers inferential statistics and the principles of probability, introducing hypothesis testing as a fundamental aspect of data analysis.
-Unit Reflection:
-The knowledge gained about hypothesis testing is crucial for validating my research findings. Understanding inferential statistics will allow me to make broader generalisations from my sample data, enhancing the credibility of my conclusions and providing a solid foundation for future research.
+					<b>7.2 Consider the bank cardholder data of Data Set C.
+					Open the Excel workbook Exa8.6C.xlsx which contains this data from the Exercises folder.
+					Assuming the data to be suitably distributed, complete an appropriate test of whether the population
+					mean income for males exceeds that of females and interpret your findings.
+					What assumptions underpin the validity of your analysis, and how could you validate them?</b></br>
+					</br>
+					Insert image
+					</br>
+					Test of Whether the Population Mean Income for Males Exceeds That of Females
+					To determine whether the mean income for males is significantly higher than that of females,
+					I conducted a two-sample t-test. Initially, I performed two versions of the test: one assuming equal
+					variances and another assuming unequal variances. After evaluating both tests, I concluded that the unequal variances
+					t-test (Welch’s t-test) was more appropriate for the data.
+					Below, I will walk through the process, interpretation, and assumptions for this analysis.</br>
+					</br>
+					Results of the t-Test (Unequal Variances):</br>
+					• Males:</br>
+					o Mean Income: 52.91</br>
+					o Variance: 233.13</br>
+					o Observations: 60</br>
+					</br>
+					• Females:</br>
+					o Mean Income: 44.23</br>
+					o Variance: 190.18</br>
+					</br>
+					o Observations: 60</br>
+					• t-Statistic: 3.27</br>
+					• p-value (One-Tailed): 0.00071</br>
+					• t Critical (One-Tailed): 1.66</br>
+					• Difference in Means: 8.68</br>
+				</br>
+					Interpretation:</br>
+					Based on the results of the t-test, the mean income for males (52.91) is higher than the mean income for females (44.23)
+					by 8.68 units. The t-statistic of 3.27 and the p-value of 0.00071 indicate that this difference is statistically significant
+					at the 0.05 level. Since the p-value is far below 0.05, I can confidently reject the null hypothesis, which states that
+					the mean income for males is less than or equal to that of females. This suggests strong evidence that males earn more
+					than females in this sample.</br>
+					</br>
+					Assumptions Underpinning the Validity of the Analysis:</br>
+					1. Normality of the Data: The t-test assumes that the income data for both males and females are normally distributed.
+					This is crucial because t-tests are sensitive to deviations from normality, especially with smaller sample sizes.</br>
+					2. Independence of Observations: The incomes of males and females are assumed to be independent of each other, meaning
+					that the income of one individual does not affect the income of another.</br>
+					3. Homogeneity of Variances (For Equal Variances Test): When assuming equal variances, the t-test requires that the variances
+					of the two groups are approximately the same. However, since the variances between males and females were notably different,
+					the assumption of equal variances was not valid, which is why I preferred the unequal variances test.</br>
+					</br>
+					How I Could Validate These Assumptions:</br>
+					1. Normality Check: I could validate the assumption of normality by examining the distribution of the income data for both males
+					and females. This could be done by creating histograms or Q-Q plots for each group. If the data closely follows a bell curve or
+					falls along the 45-degree line in a Q-Q plot, the normality assumption would be reasonable.</br>
+					2. Homogeneity of Variances: To check whether the variances are similar between males and females, I could perform Levene's test
+					or inspect the variances directly. Since the variances for males (233.13) and females (190.18) were quite different, the assumption
+					of equal variances was violated, confirming the need for the unequal variances t-test.</br>
+					3. Independence: While it's generally assumed that individuals’ incomes are independent, I could verify this by ensuring that
+					the data collection process did not involve any repeated measures or dependence between individuals (such as family members or co-workers).</br>
+					</br>
+					Conclusion:</br>
+					After conducting a t-test assuming unequal variances, I found strong evidence that the mean income for males is significantly higher than
+					that of females. The p-value of 0.00071 shows that this result is statistically significant, allowing me to reject the null hypothesis
+					and conclude that males earn more on average than females in this sample. This conclusion rests on the assumptions of normality, independence,
+					and variance similarity, which I would validate through further data exploration.</br>
+					</br>
 
-		
-			</p>
+					
+				Unit Summary:</br>
+				This unit covers inferential statistics and the principles of probability, introducing hypothesis testing as a fundamental aspect
+					of data analysis.</br>
+					</br>
+				Unit Reflection:</br>
+				The knowledge gained about hypothesis testing is crucial for validating my research findings. Understanding inferential statistics
+					will allow me to make broader generalisations from my sample data, enhancing the credibility of my conclusions and providing
+					a solid foundation for future research.</br>
+				
+				</p>
 </div>	
 	</br>
 		<button type="button" class="collapsible">Unit 8</button>
@@ -545,9 +657,9 @@ The focus on data visualisation is particularly relevant in today's data-driven 
 				<img src="images/M7U9.2.png" alt="Summary Post"class="fit-page">
 
 				Unit Summary:
-This unit introduces validity, generalisability, and reliability in research design, emphasising their significance in both qualitative and quantitative data analysis.
-Unit Reflection:
-Understanding these concepts is essential for ensuring the robustness of my research. Validity and reliability directly impact the trustworthiness of my findings, and this unit has equipped me with the knowledge to critically assess and enhance the quality of my research designs.
+				This unit introduces validity, generalisability, and reliability in research design, emphasising their significance in both qualitative and quantitative data analysis.
+				Unit Reflection:
+				Understanding these concepts is essential for ensuring the robustness of my research. Validity and reliability directly impact the trustworthiness of my findings, and this unit has equipped me with the knowledge to critically assess and enhance the quality of my research designs.
 
 				
 			</p>
